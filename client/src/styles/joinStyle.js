@@ -8,26 +8,33 @@ const useStyles = makeStyles({
         alignItems: 'center',
         padding: '100px 50px',
     },
+    title: {
+        color: 'green',
+        marginBottom: '2rem',
+    },
     textInput: {
         width: "20rem",
         paddingBottom: "1rem",
-        color: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"
-
-
     },
     button: {
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      background: 'green',
       border: 0,
       borderRadius: 3,
-      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      boxShadow: '0 3px 5px 2px rgba(114, 209, 0, .3)',
       color: 'white',
       height: 48,
       padding: '0 30px',
-    //   margin: '0 auto',
-    //   display: 'block',
+      marginTop: "2rem",
       position: 'relative',
+      transition: 'transform .2s',
       top: '50%',
+      borderRadius: "0.5rem",
+      '&:hover' :{
+        background: 'green',
+        transform: 'scale(1.1)',
+      }
     },
+
   });
   
   export default useStyles;
