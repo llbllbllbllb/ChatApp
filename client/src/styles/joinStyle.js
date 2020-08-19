@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     title: {
         color: 'green',
         marginBottom: '2rem',
+        fontWeight: "bold",
     },
     textInput: {
         width: "20rem",
