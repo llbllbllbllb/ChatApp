@@ -6,18 +6,38 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '100px 50px',
+        background: "rgba(0,128,0,0.5)",
+        height: "100vh",
+        
+    },
+    container: {
+      display:"flex",
+      flexDirection: "column",
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: "50vh",
+      width: "50vh",
+      background: "white",
+      borderRadius: "8%",
+      border: "0.5rem solid green",
+    },
+    icon:{
+      fontSize: "5rem",
+      color: "green",
+
     },
     title: {
         color: 'green',
-        marginBottom: '2rem',
+        fontSize: '3vh',
+        marginBottom: '.5rem',
         fontWeight: "bold",
     },
     textInput: {
-        width: "20rem",
+        width: "40vh",
         paddingBottom: "1rem",
     },
     button: {
+
       background: 'green',
       border: 0,
       borderRadius: 3,
@@ -25,10 +45,10 @@ const useStyles = makeStyles({
       color: 'white',
       height: 48,
       padding: '0 30px',
-      marginTop: "2rem",
-      position: 'relative',
+      marginTop: "1rem",
+
+      // position: 'relative',
       transition: 'transform .2s',
-      top: '50%',
       borderRadius: "0.5rem",
       '&:hover' :{
         background: 'green',
