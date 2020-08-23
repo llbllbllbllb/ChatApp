@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import {withStyles} from '@material-ui/core/styles'
 
@@ -13,31 +13,19 @@ const Join = () => {
 
     const style = joinStyle()
 
-    const CssTextField = withStyles({
-        root: {
-          '& label.Mui-focused': {
-            color: 'green',
-          },
-          '& .MuiInput-underline:after': {
-            borderBottomColor: 'green',
-          },
-          '& .MuiInput-underline:hover:not($disabled):before': {
-            borderBottomColor: 'green',
-          },
-        },
-      })(TextField);
-
     const [name, setName] = useState("");
     const [room, setRoom] = useState("");
 
     return(
         <div className={style.root}>
           <Container className={style.container} direction="column">
-            <TelegramIcon className={style.icon}/>
+            <TelegramIcon className={style.icon} />
             <Typography className={style.title}>Join a Chat Room</Typography>
-            <CssTextField label="Name" className={style.textInput}/>
-            <CssTextField label="Room" className={style.textInput}/>
-            <Button className={style.button}>Join now!</Button>
+            <TextField label="Name" className={style.textInput} value={name} onChange={(e) => setName(e.target.value)}/>
+            <TextField label="Room" className={style.textInput} value={room} onChange={(e) => setRoom(e.target.value)}/>
+            <Link onClick={(e) => {if(!name || !room)e.preventDefault()}} to={`/chat?name=${name}&room=${room}`} style={{textDecoration:"none"}}>
+              <Button className={style.button}>Join now!</Button>
+            </Link>
           </Container>
         </div>
 

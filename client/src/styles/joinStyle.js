@@ -24,7 +24,6 @@ const useStyles = makeStyles({
     icon:{
       fontSize: "5rem",
       color: "green",
-
     },
     title: {
         color: 'green',
@@ -35,6 +34,15 @@ const useStyles = makeStyles({
     textInput: {
         width: "40vh",
         paddingBottom: "1rem",
+        '& label.Mui-focused': {
+          color: 'green',
+        },
+        '& .MuiInput-underline:after': {
+          borderBottomColor: 'green',
+        },
+        '& .MuiInput-underline:hover:not($disabled):before': {
+            borderBottomColor: 'green',
+        },
     },
     button: {
 
