@@ -32,7 +32,8 @@ const useStyles = makeStyles({
         fontWeight: "bold",
     },
     textInput: {
-        width: "40vh",
+        width: "100%",
+        marginTop: "1rem",
         paddingBottom: "1rem",
         '& label.Mui-focused': {
           color: 'green',

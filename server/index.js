@@ -27,6 +27,7 @@ io.on('connection', (socket)=>{
         // }
 
         //welcome message
+        console.log("sending welcome message")
         socket.emit('message', {user:'admin', text:`${user.name}, welcome to ${user.room}`});
         socket.broadcast.to(user.room).emit('message', {user:'admin', text:`${user.name} has joined the room`});
         socket.join(user.room);
@@ -36,8 +37,14 @@ io.on('connection', (socket)=>{
     })
 
     socket.on('sendMessage',(message,callback) => {
+        
         const user = getUser(socket.id);
 
+        if(typeof user === 'undefined'){
+            console.log("error sent");
+            return callback({error: "Session expired"});
+        }
+        console.log(`${user.name}: ${message}`)
         io.to(user.room).emit('message',{user:user.name, text:message});
 
         callback();
@@ -46,6 +53,7 @@ io.on('connection', (socket)=>{
 
     socket.on("disconnect",()=>{
         console.log("user has left!!!")
+        // socket.disconnect()
     })
 })
 
