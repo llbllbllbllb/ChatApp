@@ -21,6 +21,10 @@ const useStyles = makeStyles({
       borderRadius: "8%",
       border: "0.5rem solid green",
     },
+    chatHistory:{
+      height:"80%",
+      overflow:"scroll"
+    },
     icon:{
       fontSize: "5rem",
       color: "green",
@@ -31,10 +35,38 @@ const useStyles = makeStyles({
         marginBottom: '.5rem',
         fontWeight: "bold",
     },
+    inputBox:{
+      // display:"flex",
+      // justifyContent:"center",
+      // alignItems:"stretch",
+      // marginTop: "1rem",
+      // paddingBottom: "1rem",
+      position:"relative",
+
+    },
+    sendIcon:{
+      fontSize:"2rem",
+      width:"5%",
+      height:"95%",
+      position:"absolute",
+      bottom:"0",
+      
+      paddingLeft:"0.5rem",
+      paddingRight:"0.5rem",
+      color:"green",
+      transition: 'transform .2s',
+      border: "1px solid green",
+      borderRadius: ".5rem",
+      '&:hover' :{
+        background:"green",
+        color:"white",
+        // transform: 'scale(1.1)',
+      }
+
+    },
     textInput: {
-        width: "100%",
-        marginTop: "1rem",
-        paddingBottom: "1rem",
+        width: "90%",
+        marginRight:"0.5rem",
         '& label.Mui-focused': {
           color: 'green',
         },
@@ -43,6 +75,10 @@ const useStyles = makeStyles({
         },
         '& .MuiInput-underline:hover:not($disabled):before': {
             borderBottomColor: 'green',
+        },
+        "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+          borderColor: "green",
+          borderRadius:"0.5rem",
         },
     },
     button: {
@@ -66,6 +102,24 @@ const useStyles = makeStyles({
     },
     message:{
       background: "rgba(0,128,0,0.5)",
+    },
+    chatBox: {
+      height:"80vh",
+      width:"80vw",
+      padding:"1rem",
+      background:"white",
+      borderRadius:"1rem",
+      display:"flex",
+      flexDirection:"column",
+      justifyContent:"space-between",
+    },
+    outerContainer: {
+      background:"rgba(0,128,0,0.5)",
+      overflow: "auto", 
+      height:"100vh",
+      display: "flex",
+      justifyContent:"center",
+      alignItems:"center",
     },
 
   });

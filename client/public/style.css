@@ -1,4 +1,17 @@
+html, body, #root {
+    overflow: auto;
+}
+
 body {    
     margin: 0 !important;
     padding: 0 !important;
+    width: "100vw"!important;
+    height: "100vh"!important;
+}
+
+#root {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: "100vw"!important;
+    height: "100vh"!important;
 }

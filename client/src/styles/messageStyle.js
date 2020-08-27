@@ -18,10 +18,12 @@ const useStyles = makeStyles({
     left: {
         display:"flex",
         justifyContent:"flex-start",
+        marginLeft: "1rem",
     },
     right: {
         display:"flex",
         justifyContent:"flex-end",
+        marginRight: "1rem",
     },
 
 
